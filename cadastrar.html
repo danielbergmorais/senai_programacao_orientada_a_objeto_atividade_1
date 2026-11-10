@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1 - Cadastro</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="forms">
+            <h1>Cadastrar Pessoa</h1>
+            <div id="erroCadastro">
+                <ul>
+                    <li>Nome deve conter 3 letras</li>
+                    <li>CPF inválido</li>
+                    <li>CNPJ inválido</li>
+                </ul>
+            </div>
+            <form method="POST" id="cadastroForm">
+                <label for="type_person">Tipo cadastro:</label>
+                <select name="type_person" id="type_person">
+                    <option value="fisica">Física</option>
+                    <option value="juridica">Júridica</option>
+                </select>
+
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome"  id="nome">
+
+                <div id="pessoa_fisica" class="type_fields">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" placeholder="000.000.000-00" id="cpf">
+
+                    <label for="data_nasc">Data de Nascimento:</label>
+                    <input type="date" name="data_nasc" placeholder="dd/mm/aaaa" id="data_nasc">
+                </div>
+
+                <div id="pessoa_juridica" class="type_fields">
+                    <label for="razaoSocial">Razão social:</label>
+                    <input type="text" name="razaoSocial" id="razaoSocial">
+                    <label for="cnpj">CNPJ:</label>
+                    <input type="text" name="cnpj" placeholder="00.000.000/0000-00" id="cnpj">
+                </div>
+
+                <label for="logradouro">Logradouro:</label>
+                <input type="text" name="logradouro" id="logradouro">
+                <label for="numero">Número:</label>
+                <input type="text" name="numero" id="numero">
+                <label for="cidade">Cidade:</label>
+                <input type="text" name="cidade" id="cidade">
+                                
+                <label for="estado">UF:</label>
+
+                <select id="estado" name="estado">
+                    <option value="">Selecione um estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+                
+                <div class="buttons">
+                    <a href="index.html">
+                    <button type="button">Voltar</button>
+                    </a>
+                    <button type="submit">Cadastrar</button>
+                </div>
+              
+            </form>
+        </div>
+    </div>
+
+</body>
+
+<script type="module" src="./js/script.js"></script>
+
+</html>

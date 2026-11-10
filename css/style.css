@@ -54,6 +54,7 @@ body {
     display: none;
     color: #ff0000;
     margin-bottom: 10px;
+    font-size: 16px;
 }
 
 #logout {
@@ -114,4 +115,11 @@ border: 2px solid #000;
     width: 150px;
     margin: 50px auto;
     display: block;
+}
+
+#sucesso {
+    color: #28a745;
+    display: none;
+    font-size: 16px;
+    margin-bottom: 20px;
 }

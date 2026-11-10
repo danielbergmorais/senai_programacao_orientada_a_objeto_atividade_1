@@ -131,9 +131,14 @@ if(cadastroForm){
             exibirErros(erros);
         } else {
             esconderErros();
+            document.getElementById('sucesso').style.display = 'block'
             saveOnStorage(type_person.value, pessoa);
-        }
 
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 2000);
+            
+        }
     }
 
     //// Mascaras 

@@ -28,13 +28,12 @@ export default class PessoaJuridica extends Pessoa {
     }
 
     validarCNPJ () {
-        return (cnpj.length !== 14)
+        return (this.#cnpj.length == 14)
     }
 
     validarRazaoSocial () {
-        return (razaoSocial.length == 0)
+        return (this.#razaoSocial.length != 0)
     }
-
 
     validarCampos () {
         let retorno =  super.validarCampos();

@@ -18,15 +18,35 @@ export default class Pessoa {
     }
 
     get endereco() {
-         return this.#endereco; 
+        return this.#endereco; 
     }
 
     set endereco(valor) {
         if (!(valor instanceof Endereco)) {
             throw new Error("O endereço deve ser uma instância da classe Endereco.");
         }
-
         this.#endereco = valor;
+    }
+
+    validarNome() {
+        return (this.#nome.length > 3)    
+    }
+
+    validarCampos(){
+        let retorno  = [] 
+        if (this.validarNome()) {
+            retorno.push({
+                success: true,
+                message: 'Nome tem mais letras'
+            })
+        } else {
+            retorno.push({
+                success: false,
+                message: 'Nome deve conter mais de 3 letras'
+            })
+        }
+
+        return retorno
     }
 
     toJSON() {
